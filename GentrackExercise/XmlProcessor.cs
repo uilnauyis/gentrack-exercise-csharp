@@ -5,7 +5,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 
-namespace gentrack_exercise
+namespace GentrackExercise
 {
     class XmlProcessor
     {
