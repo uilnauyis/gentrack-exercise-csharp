@@ -30,7 +30,7 @@ Then run
 ## What I have done
 I implemented the program and added a single test case to verify that the ouput is exactly the same as reference files.
 
-## What to do next if given more time
+## What haven't been done and could be done next if given more time
 1. Improve test coverage, including
    * Test the code with much larger xml files. I have consider this, so I implemented the file reading using stream. Yet it still need more tests.
    * Test the code with data element that in incorrect path. For example, a 'CSVIntervalData' may not satisfy ' Transactions->Transaction->MeterDataNotification->CSVIntervalData' order. I work with this case using a stack to store the path.
@@ -39,3 +39,7 @@ I implemented the program and added a single test case to verify that the ouput 
 2. Add doc comment to all the public methods
 
 3. Add a GUI interface to make it easier for user to use and easier making validate input.
+
+4. Add CI/CD pipeline
+
+5. Deploy working sample on server.
