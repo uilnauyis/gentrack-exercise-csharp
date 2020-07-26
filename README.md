@@ -1,4 +1,4 @@
-### Gentrack Coding Exercise
+# Gentrack Coding Exercise
 
 This is a small program implemented in C# and designed to run on .NET Core to 
 Extract data from XML files in a certain format to one or multiple CVS files.
