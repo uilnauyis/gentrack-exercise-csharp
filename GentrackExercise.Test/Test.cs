@@ -30,11 +30,13 @@ namespace GentrackExercise.Test
             Task.Run(() => Program.Main(new string[] { testFile }))
                 .Wait();
                 
+            // CSV files should be generated    
             Assert.True(File.Exists(outputFile1Path),
                 $"Program should generate file at Path {Directory.GetCurrentDirectory()}");
             Assert.True(File.Exists(outputFile2Path),
                 $"Program should generate file at Path {outputFile2Path}");
 
+            // Generated files should be identical as reference files
             Assert.True(FilesAreIdentical(
                 outputFile1Path,
                 "../../../testResources/12345678901.csv"),
@@ -43,7 +45,7 @@ namespace GentrackExercise.Test
 
             Assert.True(FilesAreIdentical(
                 outputFile2Path,
-                "../../../testResources/98765432109.csv"));
+                "../../../testResources/98765432109.csv", ));
         }
 
         bool FilesAreIdentical(string file1Path, string file2Path)

@@ -11,8 +11,9 @@ namespace GentrackExercise
     {
         private List<Tuple<string, int>> nodeStack = new List<Tuple<string, int>>();
 
-        internal async Task TestReader(string filePath)
+        internal async Task ProcessXml(string filePath)
         {
+            // Using stream instead of reading whole files to avoid memory leak
             using (FileStream stream = new FileStream(filePath,
                 FileMode.Open, FileAccess.Read))
             {
@@ -26,6 +27,9 @@ namespace GentrackExercise
                         if (reader.NodeType == XmlNodeType.Element)
                         {
                             // Maintain current path in the stack ('nodeStack')
+                            // Only the data in the element that is in the 
+                            // correct path and has 'CSVIntervalData' as element 
+                            // name will be extracted
                             int currentDepth = reader.Depth;
                             while (nodeStack.Count > 0 &&
                                 nodeStack[nodeStack.Count - 1].Item2 >= currentDepth)

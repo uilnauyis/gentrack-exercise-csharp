@@ -28,7 +28,7 @@ namespace GentrackExercise
             }
             
             XmlProcessor processor = new XmlProcessor();
-            await processor.TestReader(input);
+            await processor.ProcessXml(input);
         }
     }
 }
