@@ -9,13 +9,6 @@ namespace GentrackExercise.Test
 {
     public class Test
     {
-        private readonly ITestOutputHelper output;
-
-        public Test(ITestOutputHelper output)
-        {
-            this.output = output;
-        }
-
         [Fact]
         public void ShouldGenerateSameCsvFilesAsSamples()
         {
