@@ -12,8 +12,6 @@ namespace GentrackExercise.Test
         [Fact]
         public void ShouldGenerateSameCsvFilesAsSamples()
         {
-            output.WriteLine("This is output from {0}", Directory.GetCurrentDirectory());
-
             const string outputFile1Path = "./output/12345678901.csv";
             const string outputFile2Path = "./output/98765432109.csv";
             const string testFile = "../../../testResources/testfile.xml";
